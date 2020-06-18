@@ -1,3 +1,19 @@
 .row {
     height: 100px;
 }
+
+[class^=col-] {
+    
+    background-color: rgb(154, 225, 249);
+    border: 2px solid rgb(8, 32, 83);
+    line-height: 100px;
+    text-align: center;
+}
+
+.margine {
+    margin-right: 5%;
+}
+
+.box {
+    width: calc(100% / 4 - 15% / 4)
+}
