@@ -1,6 +1,7 @@
 
 body {
     background-color: rgb(51, 51, 51);
+    overflow-x: hidden;
 }
 
 .top-row {
@@ -12,8 +13,8 @@ body {
     height: 50px;
     line-height: 50px;
     text-align: center;
-    border-right: : 1px solid rgb(142, 142, 142);
-    border-left: 1px solid rgb(142, 142, 142);
+    /* border-right: 1px solid rgb(142, 142, 142); */
+    /* border-left: 1px solid rgb(142, 142, 142); */
     font-size: 1.2rem;
     text-transform: uppercase;
 }
@@ -29,15 +30,13 @@ body {
 .box-menu a:hover {
     color: rgb(34, 38, 37);
     background-color: rgb(211, 216, 218);
-    transform: scale(1.03);
-
-
+    /* transform: scale(1.03); */
 }
 
 .box-img{
     position: relative;
     height: 300px;
-
+    margin-bottom: 10px;
     background-color: rgb(51, 51, 51);
     /* border: 1px solid rgb(142, 142, 142); */
     padding: 10px;
@@ -57,47 +56,102 @@ body {
     text-transform: uppercase;
     color: white;
     text-shadow: 2px 2px 5px rgb(142, 142, 142), -2px -2px 5px rgb(142, 142, 142);
+    opacity: 0.4;
 }
 
 
-.box-img:hover {
+/* .box-img:hover {
     transform: scale(1.05);
 
-}
+} */
 
 .box-img img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     opacity: 0.6;
-    position: center;
+    position: center center;
 }
 
-.box-img h2 {
-    opacity: 0.4;
-}
 
-.box-img:hover img,
-.box-img:hover h2 {
+
+.img-hover .box-img:hover img,
+.img-hover .box-img:hover h2 {
     opacity: 1;
 }
 
 .box-text {
     padding: 10px;
-    color: rgb(142, 142, 142);
+    border-top: 1px solid rgb(142, 142, 142);
+    color: rgb(164, 162, 162);
+}
+
+.box-text:hover {
+    color: white;
 }
 
 .box-text h3 {
 
     font-size: 1.8rem;
-    text-align: left;
+    text-align: center;
     margin-bottom: 10px;
-
 }
 
 .box-text p {
-
     text-align: justify;
     font-size: 1.5rem;
+}
+
+.img-no-hover img {
+    opacity: 1;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    .top-row .box-menu:first-child {
+        padding-left: 0;
+    }
+    .top-row .box-menu:last-child {
+        padding-right: 0;
+    }
+
+    .box-menu {
+        padding: 0 10px;
+
+    }
+
+    .box-menu a {
+        border-radius: 5px;
+    }
+
+    .box-menu a:hover {
+        color: white;
+        background-color: transparent;
+        text-shadow: 1px 1px 6px rgb(142, 142, 142);
+        /* color: rgb(34, 38, 37);
+        background-color: rgb(211, 216, 218); */
+        /* transform: scale(1.03); */
+    }
+
+    .img-hover .box-img:hover {
+        transform: scale(1.05);
+    }
+
+    .box-img img{
+        border-radius: 5px;
+    }
+
+
+    .box-text h3 {
+        text-align: left;
+    }
+
+    .box-img-title h2 {
+        font-size: 2.8rem;
+
+    }
+
 
 }
